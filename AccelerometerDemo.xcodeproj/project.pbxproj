@@ -13,6 +13,8 @@
 		08BC0AD821655C3E003E44BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08BC0AD721655C3E003E44BE /* Assets.xcassets */; };
 		08BC0ADB21655C3E003E44BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08BC0AD921655C3E003E44BE /* LaunchScreen.storyboard */; };
 		08BC0ADE21655C3E003E44BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08BC0ADD21655C3E003E44BE /* main.m */; };
+		08BC0AE621655C4F003E44BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BC0AE521655C4F003E44BE /* CoreMotion.framework */; };
+		08BC0AEA21655F59003E44BE /* Square image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 08BC0AE921655F58003E44BE /* Square image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		08BC0ADA21655C3E003E44BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08BC0ADC21655C3E003E44BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08BC0ADD21655C3E003E44BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		08BC0AE521655C4F003E44BE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		08BC0AE921655F58003E44BE /* Square image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Square image.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08BC0AE621655C4F003E44BE /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 			children = (
 				08BC0ACD21655C3D003E44BE /* AccelerometerDemo */,
 				08BC0ACC21655C3D003E44BE /* Products */,
+				08BC0AE421655C4E003E44BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,8 +73,17 @@
 				08BC0AD921655C3E003E44BE /* LaunchScreen.storyboard */,
 				08BC0ADC21655C3E003E44BE /* Info.plist */,
 				08BC0ADD21655C3E003E44BE /* main.m */,
+				08BC0AE921655F58003E44BE /* Square image.jpg */,
 			);
 			path = AccelerometerDemo;
+			sourceTree = "<group>";
+		};
+		08BC0AE421655C4E003E44BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08BC0AE521655C4F003E44BE /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08BC0ADB21655C3E003E44BE /* LaunchScreen.storyboard in Resources */,
+				08BC0AEA21655F59003E44BE /* Square image.jpg in Resources */,
 				08BC0AD821655C3E003E44BE /* Assets.xcassets in Resources */,
 				08BC0AD621655C3D003E44BE /* Main.storyboard in Resources */,
 			);

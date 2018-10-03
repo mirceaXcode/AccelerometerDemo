@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-AO-wLA">
+                                <rect key="frame" x="135" y="55" width="105" height="30"/>
+                                <state key="normal" title="Get some data!"/>
+                                <connections>
+                                    <action selector="staticRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRy-Co-Vgo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Static Data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQG-ob-T72">
+                                <rect key="frame" x="145.5" y="93" width="84.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5f-MF-ECZ">
+                                <rect key="frame" x="103" y="121" width="168" height="30"/>
+                                <state key="normal" title="Start Dynamic Callbacks"/>
+                                <connections>
+                                    <action selector="dynamicStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cY-70-bK0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dynamic Data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsF-f5-Lal">
+                                <rect key="frame" x="134" y="159" width="107" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWa-CV-OzO">
+                                <rect key="frame" x="104" y="187" width="166" height="30"/>
+                                <state key="normal" title="Stop Dynamic Callbacks"/>
+                                <connections>
+                                    <action selector="dynamicStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QgE-bu-1Ue"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2uR-So-t1E">
+                                <rect key="frame" x="62" y="382" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="ILQ-46-ewS"/>
+                                    <constraint firstAttribute="width" constant="250" id="TNd-fo-COb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NWa-CV-OzO" firstAttribute="top" secondItem="LsF-f5-Lal" secondAttribute="bottom" constant="8" symbolic="YES" id="1w0-A9-Ms0"/>
+                            <constraint firstItem="IQG-ob-T72" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q8T-4F-TC4"/>
+                            <constraint firstItem="H5f-MF-ECZ" firstAttribute="top" secondItem="IQG-ob-T72" secondAttribute="bottom" constant="8" symbolic="YES" id="UjX-ZM-3ml"/>
+                            <constraint firstItem="GUm-AO-wLA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wzq-Xp-vVl"/>
+                            <constraint firstItem="IQG-ob-T72" firstAttribute="top" secondItem="GUm-AO-wLA" secondAttribute="bottom" constant="8" symbolic="YES" id="X3V-7W-eik"/>
+                            <constraint firstItem="LsF-f5-Lal" firstAttribute="top" secondItem="H5f-MF-ECZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Zej-bW-pMM"/>
+                            <constraint firstItem="2uR-So-t1E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d6n-9v-aqA"/>
+                            <constraint firstItem="LsF-f5-Lal" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iMO-23-71f"/>
+                            <constraint firstItem="GUm-AO-wLA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="sj4-hE-LLa"/>
+                            <constraint firstItem="NWa-CV-OzO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tpI-yy-fh7"/>
+                            <constraint firstItem="H5f-MF-ECZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xms-Rz-gQ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2uR-So-t1E" secondAttribute="bottom" constant="35" id="y70-dA-ILo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dynamicLabel" destination="LsF-f5-Lal" id="VM6-sh-wNc"/>
+                        <outlet property="dynamicStartButton" destination="H5f-MF-ECZ" id="hYk-gn-Ray"/>
+                        <outlet property="dynamicStopButton" destination="NWa-CV-OzO" id="86p-Tn-dsu"/>
+                        <outlet property="imageView" destination="2uR-So-t1E" id="KSz-HZ-woY"/>
+                        <outlet property="staticButton" destination="GUm-AO-wLA" id="inu-DZ-v8f"/>
+                        <outlet property="staticLabel" destination="IQG-ob-T72" id="LIl-S1-6OB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
